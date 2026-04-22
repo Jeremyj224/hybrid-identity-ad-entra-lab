@@ -68,4 +68,4 @@ This lab demonstrates practical experience with hybrid identity, authentication 
 ---
 
 ## Screenshots
-images/ad-structure1.png
+![AD Structure](images/ad-structure1.png)
