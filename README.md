@@ -104,11 +104,114 @@ Below are the results showing successful synchronization of on‑premises identi
 
 ---
 
-## Challenges
-- Resolved synchronization issues caused by incorrect UPN configuration  
-- Troubleshot login failures due to domain configuration issues  
-- Fixed group membership inconsistencies affecting access  
+##  Issue: Standard Domain Users Unable to Log In
 
+###  Description
+After joining a workstation to the domain, standard users were unable to log in.
 
+Error displayed:
+> "The sign-in method you're trying to use isn't allowed."
 
+-  Domain Admin login worked  
+-  Standard domain users failed  
 
+---
+
+##  Troubleshooting Steps
+
+### 1. Verify Domain Connectivity
+```bash
+ping judelab.local
+```
+
+### 2. Confirm Machine is Domain Joined
+Verified the workstation was successfully joined to the **JUDELAB** domain.
+
+### 3. Attempt Login
+```
+JUDELAB\esmith
+```
+
+### 4. Check Applied Group Policy
+```bash
+gpresult /r
+```
+
+**Observed:**  
+`Applied Group Policy Objects: N/A`  
+→ This indicated the workstation had **not yet received** the correct domain policies.
+
+### 5. Review GPO Configuration
+Navigated to:
+
+```
+Computer Configuration
+→ Windows Settings
+→ Security Settings
+→ Local Policies
+→ User Rights Assignment
+→ Allow log on locally
+```
+
+ Confirmed **Domain Users** were allowed to log on locally.  
+ **Security Filtering** on the GPO was set to **Authenticated Users**, meaning the policy *should* apply to all domain users and computers.
+
+---
+
+##  Resolution Steps
+
+### 1. Force Group Policy Update
+```bash
+gpupdate /force
+```
+
+### 2. Reboot Workstation
+```bash
+shutdown /r /t 0
+```
+
+### 3. Verify Policy Application
+```bash
+gpresult /r
+```
+
+### 4. Retest Login
+```
+JUDELAB\esmith
+```
+
+---
+
+## Outcome
+- Standard domain users successfully logged in  
+- Group Policy applied correctly  
+- Login restrictions resolved  
+
+---
+
+## Key Takeaways
+- **Authentication ≠ Authorization**  
+  A user can exist in AD but still be blocked from logging in if permissions aren’t applied.
+
+- **Logon permissions are enforced via Group Policy**  
+  The “Allow log on locally” right is critical.
+
+- **Security Filtering matters**  
+  If a GPO is not filtered to include the right users/computers, it will never apply.
+
+- **Group Policy changes often require a reboot**  
+  Especially on newly joined machines.
+
+- **Domain Admins bypass many restrictions**  
+  Which is why admin login worked even when standard users failed.
+
+---
+
+## Root Cause
+Group Policy had not fully applied to the workstation after joining the domain.  
+Logon rights were not enforced until:
+
+- A Group Policy update, and  
+- A system reboot
+
+Once both occurred, standard users were able to authenticate normally.
