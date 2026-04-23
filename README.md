@@ -7,6 +7,19 @@ Built a hybrid identity environment integrating on-premises Active Directory wit
 
 ---
 
+## Domain Ownership Note
+When this lab was originally created, the Microsoft Entra tenant was deployed first using the default *.onmicrosoft.com domain. At that time, I did not yet own a custom domain.
+
+Later, after purchasing my own domain (judeidentity.com), I updated the environment to use this domain as the primary UPN suffix for users. This required:
+
+- Adding the custom domain to Microsoft Entra ID  
+- Verifying DNS ownership  
+- Adding the same UPN suffix inside Active Directory Domains and Trusts  
+- Updating Azure AD Connect to use the new UPN suffix for synchronization  
+
+This change aligns the on‑premises AD identities with the cloud tenant and reflects a more realistic enterprise identity setup.
+
+
 ## Environment Setup
 - Provisioned a Windows Server virtual machine using Oracle VirtualBox  
 - Installed Windows Server using official ISO media  
