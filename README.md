@@ -39,7 +39,6 @@ This environment consists of:
 - Identity Synchronization (AD > Entra ID)  
 - Authentication across hybrid environments  
 - Role-Based Access Control (RBAC)  
-- Identity lifecycle management (Joiner/Mover/Leaver)  
 
 ---
 
