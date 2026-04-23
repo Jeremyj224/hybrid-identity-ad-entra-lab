@@ -40,6 +40,10 @@ This environment consists of:
 - Synced users from AD to Entra ID  
 - Joined devices to domain and tested authentication
 
+## PowerShell Script
+The full automation script is available here:
+[AD-Automation.ps1](scripts/AD-Automation.ps1)
+
 
 ## Authentication Flow
 User attempts to log into a cloud application → redirected to Entra ID → Entra authenticates using synced identity → access granted based on group membership.
