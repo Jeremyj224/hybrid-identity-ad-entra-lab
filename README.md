@@ -104,6 +104,7 @@ Below are the results showing successful synchronization of on‑premises identi
 
 ---
 
+## Challenges/Troubleshooting
 ##  Issue: Standard Domain Users Unable to Log In
 
 ###  Description
