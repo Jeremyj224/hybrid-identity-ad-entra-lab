@@ -97,6 +97,7 @@ Below are the Azure AD Connect configuration screenshots used in this hybrid ide
 ## Azure AD Connect Sync Results
 
 Below are the results showing successful synchronization of on‑premises identities to Microsoft Entra ID.
+![Azure AD Connect Sync Dashboard](images/Sync-Status.png)
 
 ![Synced Users](images/Synced-Users.png)
 ![Synced AD Security Groups](images/Synced-AD-Security-Groups.png)
