@@ -216,3 +216,15 @@ Logon rights were not enforced until:
 - A system reboot
 
 Once both occurred, standard users were able to authenticate normally.
+
+###  GPO Settings & Configuration
+These screenshots show the GPO settings that control local logon rights and domain policy behavior.
+
+![GPO Settings](images/GPO-Setting.png)
+![GPO Security Filtering](images/GPO-Security-Filtering.png)
+
+### Applied GPO Results (Workstation)
+The second screenshot shows the results of `gpresult /scope computer /r` after the workstation successfully applied the Default Domain Policy.
+
+![Applied GPO](images/Applied-GPO.png)
+![GPO Result - Computer Scope](images/GPO-Result.png)
