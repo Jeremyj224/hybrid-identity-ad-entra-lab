@@ -1,4 +1,3 @@
-# hybrid-identity-ad-entra-lab
 
 # Hybrid Identity Lab: Active Directory + Microsoft Entra ID
 
