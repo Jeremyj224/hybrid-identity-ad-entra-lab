@@ -87,23 +87,19 @@ Below are the Azure AD Connect configuration screenshots used in this hybrid ide
 ![Server Management Tasks](images/Server-management-tasks.png)
 ![Certificate Management Task](images/Cert-management-task.png)
 
-## Azure AD Connect Sync Results
-
-Below are the results showing successful synchronization of on‑premises identities to Microsoft Entra ID.
-
-![Synced Users](images/Synced-Users.png)
-![Synced AD Security Groups](images/Synced-AD-Security-Groups.png)
-
-
-## Authentication Flow
-User attempts to log into a cloud application → redirected to Entra ID → Entra authenticates using synced identity → access granted based on group membership.
-
 ---
 
 ## Validation
 - Verified users synced successfully from AD to Entra ID  
 - Tested authentication to Microsoft 365 services  
 - Confirmed group-based access assignments  
+
+## Azure AD Connect Sync Results
+
+Below are the results showing successful synchronization of on‑premises identities to Microsoft Entra ID.
+
+![Synced Users](images/Synced-Users.png)
+![Synced AD Security Groups](images/Synced-AD-Security-Groups.png)
 
 ---
 
