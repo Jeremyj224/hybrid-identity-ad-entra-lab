@@ -39,6 +39,7 @@ This environment consists of:
 - Configured Azure AD Connect for directory synchronization  
 - Synced users from AD to Entra ID  
 - Joined devices to domain and tested authentication
+- Created a domain admin account and added it to a OU
 
 ## PowerShell Script
 The full automation script is available here:
