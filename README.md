@@ -45,6 +45,18 @@ This environment consists of:
 The full automation script is available here:
 [AD-Automation.ps1](scripts/AD-Automation.ps1)
 
+## Active Directory Structure (Screenshots)
+
+Below are screenshots of the on‑premises Active Directory structure created for this lab:
+
+![AD Structure 1](images/ad-structure1.png)
+![AD Structure 2](images/ad-structure2.png)
+![AD Structure 3](images/ad-structure3.png)
+![AD Structure 4](images/ad-structure4.png)
+![AD Structure 5](images/ad-structure5.png)
+![AD Structure 6](images/ad-structure6.png)
+![AD Structure 7](images/ad-structure7.png)
+
 
 ## Authentication Flow
 User attempts to log into a cloud application → redirected to Entra ID → Entra authenticates using synced identity → access granted based on group membership.
