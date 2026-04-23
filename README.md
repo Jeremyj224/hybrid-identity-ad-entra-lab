@@ -226,3 +226,9 @@ The second screenshot shows the results of `gpresult /scope computer /r` after t
 
 ![Applied GPO](images/Applied-GPO.png)
 ![GPO Result - Computer Scope](images/GPO-Result.png)
+
+## Key Takeaways
+Authentication ≠ Authorization
+Logon rights are controlled by Group Policy
+GPO changes often require reboot to apply fully
+Domain Admin accounts bypass many restriction
