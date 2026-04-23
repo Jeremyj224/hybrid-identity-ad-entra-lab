@@ -70,6 +70,30 @@ Below are screenshots of the on‑premises Active Directory structure created fo
 ![AD Structure 6](images/ad-structure6.png)
 ![AD Structure 7](images/ad-structure7.png)
 
+## Azure AD Connect Configuration (Screenshots)
+
+Below are the Azure AD Connect configuration screenshots used in this hybrid identity setup.
+
+![Connect to Entra ID](images/Connect-to-EntralID.png)
+![Connect Directory](images/Connect-Directory.png)
+![User Sign-In](images/User-sign-in.png)
+![Domain OU Filtering](images/Domain-OU-Filtering.png)
+![Optional Features](images/Optional-Features.png)
+![Device Options](images/Device-Options.png)
+![Device OS](images/Device-OS.png)
+![SCP Configuration](images/SCP-Configuration.png)
+![Primary Custom Domain](images/Primary-Custom-Domain.png)
+![AD Domain Trusts](images/AD-Domain-Trusts.png)
+![Server Management Tasks](images/Server-management-tasks.png)
+![Certificate Management Task](images/Cert-management-task.png)
+
+## Azure AD Connect Sync Results
+
+Below are the results showing successful synchronization of on‑premises identities to Microsoft Entra ID.
+
+![Synced Users](images/Synced-Users.png)
+![Synced AD Security Groups](images/Synced-AD-Security-Groups.png)
+
 
 ## Authentication Flow
 User attempts to log into a cloud application → redirected to Entra ID → Entra authenticates using synced identity → access granted based on group membership.
