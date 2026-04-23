@@ -1,6 +1,6 @@
 
 ## Users
-- 6 users per department  
+- 6 users per department  (I've added a couple users manually as well) 
 - Randomized first/last names  
 - Unique SAMAccountName logic  
 - UPN + email using judeidentity.com  
