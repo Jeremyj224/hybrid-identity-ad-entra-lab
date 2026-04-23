@@ -37,7 +37,9 @@ This environment consists of:
 - Created users and security groups in AD via powershell 
 - Configured Azure AD Connect for directory synchronization  
 - Synced users from AD to Entra ID  
-- Joined devices to domain and tested authentication  
+- Joined devices to domain and tested authentication
+
+![AD Structure](images/ad-structure1.png)
 
 ---
 
@@ -67,5 +69,4 @@ This lab demonstrates practical experience with hybrid identity, authentication 
 
 ---
 
-## Screenshots
-![AD Structure](images/ad-structure1.png)
+
