@@ -34,14 +34,12 @@ This environment consists of:
 ## Implementation
 - Deployed Active Directory domain environment  
 - Designed Organizational Unit (OU) structure  
-- Created users and security groups in AD via powershell 
+- Created users and security groups in AD via powershell
+- Password and logon requirements
 - Configured Azure AD Connect for directory synchronization  
 - Synced users from AD to Entra ID  
 - Joined devices to domain and tested authentication
 
-![AD Structure](images/ad-structure1.png)
-
----
 
 ## Authentication Flow
 User attempts to log into a cloud application → redirected to Entra ID → Entra authenticates using synced identity → access granted based on group membership.
@@ -60,13 +58,6 @@ User attempts to log into a cloud application → redirected to Entra ID → Ent
 - Troubleshot login failures due to domain configuration issues  
 - Fixed group membership inconsistencies affecting access  
 
----
 
-## Outcome
-Established a working hybrid identity environment enabling centralized identity and access management across cloud and on-prem systems.
-
-This lab demonstrates practical experience with hybrid identity, authentication flows, and access control design in enterprise environments.
-
----
 
 
